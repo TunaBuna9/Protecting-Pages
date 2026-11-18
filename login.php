@@ -26,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             // TODO 6b: store whether this user is an admin (true or false).
+            $_SESSION['is_admin'] = (bool) $user['is_admin'];
+
 
             header('Location: welcome.php');
             exit;

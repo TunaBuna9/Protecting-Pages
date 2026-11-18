@@ -7,6 +7,7 @@ require __DIR__ . '/includes/db-functions.php';
 
 // TODO 3: only a logged-in user may see this page.
 // (TODO 8a changes this to an admin-only check.)
+requireAdmin();
 
 $users = getUsers($db);
 ?>

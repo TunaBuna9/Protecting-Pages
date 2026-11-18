@@ -2,10 +2,17 @@
 // The links at the top of every page. A page calls session_start() before it includes this file.
 
 // TODO 5: set $loggedIn to true when the session holds a user id.
-$loggedIn = false;
+// $loggedIn = false;
+
+$loggedIn = isset($_SESSION['user_id']);
+// Doesn't need start because it's on the pages themselves
+
 
 // TODO 8b: set $isAdmin from the value stored at login (false when it is missing).
-$isAdmin = true;
+// $isAdmin = true;
+$isAdmin = $_SESSION['is_admin'] ?? false;
+
+
 ?>
 <nav>
     <a href="movies.php">Movies</a>

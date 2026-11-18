@@ -4,6 +4,7 @@ session_start();
 require __DIR__ . '/includes/auth.php';
 
 // TODO 3: only a logged-in user may see this page.
+requireLogin();
 
 // null when nobody has logged in (no warning for a missing key).
 $username = $_SESSION['username'] ?? null;

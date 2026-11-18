@@ -27,7 +27,7 @@ function addUser(PDO $db, string $username, string $storedPassword): void
 function getUserByUsername(PDO $db, string $username)
 {
     // TODO 6a: also select the is_admin column.
-    $sql = 'SELECT user_id, username, password_hash
+    $sql = 'SELECT user_id, username, password_hash, is_admin
             FROM users
             WHERE username = :username';
     $statement = $db->prepare($sql);
